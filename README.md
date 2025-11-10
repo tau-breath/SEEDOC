@@ -21,44 +21,36 @@
 ## Screenshots
 
 ### Professional Dark Theme Interface
-```
-┌─────────────────────────────────────────┐
-│ SEEDOC - Professional Document Converter │
-├──────────┬──────────────────────────────┤
-│ Settings │ Drop Files or Folders        │
-│          │                              │
-│ Format   │  📦                          │
-│ Quality  │  Multiple files supported    │
-│ DPI      │                              │
-│          │                              │
-│ Actions  ├──────────────────────────────┤
-│ Add Files│ Conversion Log               │
-│ Add Folder│ [timestamp] processing...   │
-│          │                              │
-│ Queue    │                              │
-│ file1.md │                              │
-│ file2.txt│                              │
-└──────────┴──────────────────────────────┘
-```
+
+![SEEDOC Screenshot](screenshot.webp)
 
 ---
 
 ## Installation
 
-### Option 1: Run from Source
+### Option 1: Download Portable Executable
+
+📦 **[Download SEEDOC v1.0.0](https://github.com/tau-breath/SEEDOC/releases/tag/v1.0.0)**
+
+- **Windows**: `SEEDOC-v1.0.0-Portable.exe` (78MB, no installation required)
+- **macOS**: Coming soon
+- **Linux**: Coming soon
+
+### Option 2: Run from Source
 
 ```bash
-cd mir-converter-electron
+git clone https://github.com/tau-breath/SEEDOC.git
+cd SEEDOC
 npm install
 npm start
 ```
 
-### Option 2: Build Standalone App
+### Option 3: Build Yourself
 
 **Windows**:
 ```bash
 npm run build:win
-# Output: dist/SEEDOC Setup 1.0.0.exe
+# Output: dist/SEEDOC-v1.0.0-Portable.exe
 ```
 
 **macOS**:
@@ -164,8 +156,8 @@ SEEDOC/
 
 ```bash
 # Clone repository
-git clone <repo-url>
-cd mir-converter-electron
+git clone https://github.com/tau-breath/SEEDOC.git
+cd SEEDOC
 
 # Install dependencies
 npm install
@@ -257,4 +249,5 @@ Special thanks to:
 
 ---
 
-**For support, issues, or contributions, please visit the repository.**
+**For support, issues, or contributions:**
+🔗 [https://github.com/tau-breath/SEEDOC](https://github.com/tau-breath/SEEDOC)
