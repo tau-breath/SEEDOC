@@ -1,0 +1,62 @@
+{
+  "name": "seedoc",
+  "version": "1.0.0",
+  "description": "SEEDOC - Professional Document Converter (Text ↔ Image)",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "build:win": "electron-builder --win",
+    "build:mac": "electron-builder --mac",
+    "build:linux": "electron-builder --linux"
+  },
+  "keywords": ["electron", "converter", "document", "ocr", "seedoc"],
+  "author": "Mir & Sarang",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  },
+  "dependencies": {
+    "sharp": "^0.33.1",
+    "tesseract.js": "^5.0.3"
+  },
+  "build": {
+    "appId": "com.seedoc.app",
+    "productName": "SEEDOC",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "index.html",
+      "node_modules/**/*",
+      "favicon.png"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "seedoc.ico",
+      "artifactName": "${productName}-v${version}-Portable.${ext}"
+    },
+    "portable": {
+      "artifactName": "${productName}-v${version}-Portable.exe"
+    },
+    "compression": "maximum",
+    "asar": true,
+    "mac": {
+      "target": ["dmg"],
+      "icon": "build/icon.icns",
+      "category": "public.app-category.productivity"
+    },
+    "linux": {
+      "target": ["AppImage", "deb"],
+      "icon": "build/icon.png",
+      "category": "Utility"
+    }
+  }
+}
